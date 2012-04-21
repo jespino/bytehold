@@ -8,10 +8,12 @@ class BaseBackupTest(TestCase):
         self.assertEqual(base_backup.args, 'test')
 
     def test_handlers(self):
+        base_backup = BaseBackup('test')
         with self.assertRaises(NotImplementedError):
             base_backup.handlers()
 
     def test_init(self):
+        base_backup = BaseBackup('test')
         with self.assertRaises(NotImplementedError):
             base_backup.init()
 
